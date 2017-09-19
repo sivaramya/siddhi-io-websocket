@@ -1,5 +1,0 @@
-org/wso2/extension/siddhi/io/websocket/sink/WebsocketChannelHandlerContext.class
-org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.class
-org/wso2/extension/siddhi/io/websocket/sink/WebsocketHttpRequest.class
-org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkUtil.class
-META-INF/annotations/org.wso2.siddhi.annotation.Extension

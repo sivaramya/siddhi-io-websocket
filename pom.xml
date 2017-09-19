@@ -25,7 +25,7 @@
         <siddhi.map.json.version>4.0.3</siddhi.map.json.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jacoco.version>0.7.9</jacoco.version>
-        <carbon.transport.version>4.4.29</carbon.transport.version>
+        <carbon.transport.version>6.0.0</carbon.transport.version>
     </properties>
 
     <dependencyManagement>

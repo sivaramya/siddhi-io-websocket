@@ -20,15 +20,12 @@
 package org.wso2.extension.siddhi.io.websocket.sink;
 
 import org.apache.log4j.Logger;
-import org.wso2.carbon.messaging.CarbonMessage;
-import org.wso2.carbon.messaging.DefaultCarbonMessage;
-import org.wso2.carbon.messaging.Header;
 import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
 import org.wso2.carbon.transport.http.netty.common.Constants;
-import org.wso2.carbon.transport.http.netty.config.ListenerConfiguration;
-import org.wso2.carbon.transport.http.netty.internal.websocket.WebSocketSessionImpl;
-import org.wso2.carbon.transport.http.netty.listener.WebSocketSourceHandler;
-import org.wso2.carbon.transport.http.netty.sender.websocket.WebSocketClientConnector;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
+import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;;
+import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
@@ -40,8 +37,7 @@ import org.wso2.siddhi.core.util.transport.DynamicOptions;
 import org.wso2.siddhi.core.util.transport.OptionHolder;
 import org.wso2.siddhi.query.api.definition.StreamDefinition;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 import javax.websocket.Session;
 
@@ -60,25 +56,12 @@ public class WebsocketSink extends Sink {
     private static final Logger log = Logger.getLogger(WebsocketSink.class);
 
     private static final String URI = "uri";
-    private static final String HEADERS = "headers";
-    private static final String CLIENT_SERVICE_NAME = "client.service.name";
-    private static final String SUBPROTOCLOS = "subprotocols";
-    private static final String ALLOW_EXTENSIONS = "allow.extensions";
-    private static final String CHANNEL_ID = "channel.id";
-    private static final String SECURE_ENABLED = "secure.enabled";
 
     private StreamDefinition streamDefinition;
     private Session session = null;
     private String uri;
-    private String clientServiceName;
-    private WebSocketClientConnector webSocketClientConnector = null;
-    private String subprotocols;
-    private boolean allowExtensions;
-    private WebSocketSourceHandler sourceHandler = null;
-    private String header;
-    private String channelId;
-    private boolean isSecured;
-
+    private WebSocketClientConnector clientConnector;
+    private HttpWsConnectorFactoryImpl httpConnectorFactory = null;
 
     @Override
     public Class[] getSupportedInputEventClasses() {
@@ -95,50 +78,23 @@ public class WebsocketSink extends Sink {
                         ConfigReader configReader, SiddhiAppContext siddhiAppContext) {
         this.streamDefinition = streamDefinition;
         this.uri = optionHolder.validateAndGetStaticValue(URI);
-        this.clientServiceName = optionHolder.validateAndGetStaticValue(CLIENT_SERVICE_NAME);
-        this.subprotocols = optionHolder.validateAndGetStaticValue(SUBPROTOCLOS);
-        this.allowExtensions = Boolean.parseBoolean(optionHolder.validateAndGetStaticValue(ALLOW_EXTENSIONS));
-        this.header = optionHolder.validateAndGetStaticValue(HEADERS);
-        this.channelId = optionHolder.validateAndGetStaticValue(CHANNEL_ID);
-        this.isSecured = Boolean.parseBoolean(optionHolder.validateAndGetStaticValue(SECURE_ENABLED));
+        httpConnectorFactory = new HttpWsConnectorFactoryImpl();
 
     }
 
     @Override
     public void connect() throws ConnectionUnavailableException {
-        List<Header> headers = null;
-        headers = new WebsocketSinkUtil().getHeaders(header);
-        webSocketClientConnector = new WebSocketClientConnector();
-        WebsocketChannelHandlerContext channelHandlerContext = new WebsocketChannelHandlerContext();
-        ListenerConfiguration listenerConfiguration = new ListenerConfiguration();
-        WebsocketHttpRequest httpRequestUtil = new WebsocketHttpRequest();
-        String sessionId = "websocket";
+        Map<String, Object> senderProperties = new HashMap<>();
+        senderProperties.put(Constants.REMOTE_ADDRESS, uri);
+        senderProperties.put(Constants.WEBSOCKET_SUBPROTOCOLS, null);
+        clientConnector = httpConnectorFactory.createWsClientConnector(senderProperties);
+        WebSocketClientConnectorListener connectorListener = new WebSocketClientConnectorListener();
         try {
-            WebSocketSessionImpl serverSession = new WebSocketSessionImpl(channelHandlerContext , isSecured, uri,
-                    sessionId);
-            sourceHandler = new WebSocketSourceHandler(channelId, null, listenerConfiguration,
-                    httpRequestUtil, isSecured, channelHandlerContext, serverSession);
-        } catch (URISyntaxException e) {
-            throw new ConnectionUnavailableException("Error in connecting with the websocket client" +
-                    streamDefinition);
-        } catch (Exception e) {
-            throw new ConnectionUnavailableException("Error in connecting with the websocket client" +
-                    streamDefinition);
-        }
-        CarbonMessage cMessage = new DefaultCarbonMessage();
-        cMessage.setProperty(Constants.REMOTE_ADDRESS, uri);
-        cMessage.setProperty(Constants.TO, clientServiceName);
-        cMessage.setProperty("WEBSOCKET_SUBPROTOCOLS", subprotocols);
-        cMessage.setProperty("WEBSOCKET_ALLOW_EXTENSIONS", allowExtensions);
-        cMessage.setProperty(Constants.SRC_HANDLER, sourceHandler);
-        cMessage.setHeaders(headers);
-        try {
-            session = (Session) webSocketClientConnector.init(cMessage, null, null);
+            session = handshake(connectorListener);
         } catch (ClientConnectorException e) {
-            throw new ConnectionUnavailableException("Error in connecting with the websocket client" +
-                    streamDefinition);
+            throw new ConnectionUnavailableException("Session was not available when trying to publish events " +
+                    "in " + streamDefinition);
         }
-
     }
 
     @Override
@@ -186,6 +142,11 @@ public class WebsocketSink extends Sink {
 
     @Override
     public void restoreState(Map<String, Object> map) {
+    }
+
+    private Session handshake(WebSocketConnectorListener connectorListener) throws ClientConnectorException {
+        Map<String, String> customHeaders = new HashMap<>();
+        return clientConnector.connect(connectorListener, customHeaders);
     }
 
 }
