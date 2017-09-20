@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WebsocketSource.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">siddhi-io-websocket</a> &gt; <a href="index.source.html" class="el_package">org.wso2.extension.siddhi.io.websocket.source</a> &gt; <span class="el_source">WebsocketSource.java</span></div><h1>WebsocketSource.java</h1><pre class="source lang-java linenums">package org.wso2.extension.siddhi.io.websocket.source;
+
+import org.apache.log4j.Logger;
+import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
+import org.wso2.carbon.transport.http.netty.common.Constants;
+import org.wso2.carbon.transport.http.netty.contract.websocket.*;
+import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;
+import org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink;
+import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
+import org.wso2.siddhi.annotation.Example;
+import org.wso2.siddhi.annotation.Extension;
+import org.wso2.siddhi.core.config.SiddhiAppContext;
+import org.wso2.siddhi.core.exception.ConnectionUnavailableException;
+import org.wso2.siddhi.core.stream.input.source.Source;
+import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
+import org.wso2.siddhi.core.util.config.ConfigReader;
+import org.wso2.siddhi.core.util.transport.OptionHolder;
+
+import javax.websocket.MessageHandler;
+import javax.websocket.Session;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * {@code WebsocketSink } Handle the websocket publishing tasks.
+ */
+
+@Extension(
+        name = &quot;websocket&quot;,
+        namespace = &quot;source&quot;,
+        description = &quot;description &quot;,
+        examples = @Example(description = &quot;TBD&quot;, syntax = &quot;TBD&quot;)
+)
+
+<span class="fc" id="L36">public class WebsocketSource extends Source {</span>
+<span class="fc" id="L37">    private static final Logger log = Logger.getLogger(WebsocketSink.class);</span>
+
+    private static final String URI = &quot;uri&quot;;
+
+    private String uri;
+    private WebSocketClientConnector clientConnector;
+    private SourceEventListener sourceEventListener;
+    private WebSocketClientConnectorListener connectorListener;
+
+    @Override
+    public void init(SourceEventListener sourceEventListener, OptionHolder optionHolder, String[] strings,
+                     ConfigReader configReader, SiddhiAppContext siddhiAppContext) {
+<span class="fc" id="L49">        this.uri = optionHolder.validateAndGetStaticValue(URI);</span>
+<span class="fc" id="L50">        this.sourceEventListener = sourceEventListener;</span>
+<span class="fc" id="L51">        connectorListener = new WebSocketClientConnectorListener();</span>
+<span class="fc" id="L52">        HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();</span>
+<span class="fc" id="L53">        WsClientConnectorConfig configuration = new WsClientConnectorConfig(uri);</span>
+<span class="fc" id="L54">        clientConnector = httpConnectorFactory.createWsClientConnector(configuration);</span>
+<span class="fc" id="L55">    }</span>
+
+    @Override
+    public Class[] getOutputEventClasses() {
+<span class="fc" id="L59">        return new Class[]{String.class};</span>
+    }
+
+    @Override
+    public void connect(ConnectionCallback connectionCallback) throws ConnectionUnavailableException {
+<span class="fc" id="L64">        HandshakeFuture handshakeFuture = handshake(connectorListener);</span>
+<span class="fc" id="L65">        handshakeFuture.setHandshakeListener(new HandshakeListener() {</span>
+            @Override
+            public void onSuccess(Session session) {
+<span class="fc" id="L68">                connectorListener.setSourceEventListener(sourceEventListener);</span>
+<span class="fc" id="L69">            }</span>
+
+            @Override
+            public void onError(Throwable throwable) {
+<span class="nc" id="L73">                log.error(&quot;error in sending the message&quot;);</span>
+<span class="nc" id="L74">            }</span>
+        });
+<span class="fc" id="L76">    }</span>
+
+    @Override
+    public void disconnect() {
+
+<span class="fc" id="L81">    }</span>
+
+    @Override
+    public void destroy() {
+
+<span class="fc" id="L86">    }</span>
+
+    @Override
+    public void pause() {
+
+<span class="nc" id="L91">    }</span>
+
+    @Override
+    public void resume() {
+
+<span class="nc" id="L96">    }</span>
+
+    @Override
+    public Map&lt;String, Object&gt; currentState() {
+<span class="nc" id="L100">        return null;</span>
+    }
+
+    @Override
+    public void restoreState(Map&lt;String, Object&gt; map) {
+
+<span class="nc" id="L106">    }</span>
+
+    private HandshakeFuture handshake(WebSocketConnectorListener connectorListener) {
+<span class="fc" id="L109">        return clientConnector.connect(connectorListener);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

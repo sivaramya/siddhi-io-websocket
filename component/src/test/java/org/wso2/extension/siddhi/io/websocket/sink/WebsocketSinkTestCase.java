@@ -19,12 +19,16 @@
 package org.wso2.extension.siddhi.io.websocket.sink;
 
 import org.apache.log4j.Logger;
+import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
 import org.wso2.siddhi.core.SiddhiManager;
 import org.wso2.siddhi.core.event.Event;
 import org.wso2.siddhi.core.stream.input.InputHandler;
+import org.wso2.siddhi.core.stream.output.StreamCallback;
+import org.wso2.siddhi.core.util.SiddhiTestHelper;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -48,7 +52,7 @@ public class WebsocketSinkTestCase {
         log.info("---------------------------------------------------------------------------------------------");
         receivedEventNameList = new ArrayList<>(3);
         SiddhiManager siddhiManager = new SiddhiManager();
-        /*SiddhiAppRuntime siddhiAppRuntime = siddhiManager
+        SiddhiAppRuntime siddhiAppRuntime = siddhiManager
                 .createSiddhiAppRuntime(
                         "@App:name('TestExecutionPlan') " +
                                 "define stream FooStream1 (symbol string, price float, volume long); " +
@@ -68,17 +72,16 @@ public class WebsocketSinkTestCase {
             }
         });
 
-        siddhiAppRuntime.start();*/
         SiddhiAppRuntime executionPlanRuntime = siddhiManager.createSiddhiAppRuntime(
                 "@App:name('TestExecutionPlan') " +
                         "define stream FooStream1 (symbol string, price float, volume long); " +
                         "@info(name = 'query1') " +
-                        "@sink(type='websocket', uri = 'ws://localhost:8025/websockets/', " +
+                        "@sink(type='websocket', uri = 'ws://localhost:8025/websockets/abc', " +
                         "@map(type='xml'))" +
                         "Define stream BarStream1 (symbol string, price float, volume long);" +
                         "from FooStream1 select symbol, price, volume insert into BarStream1;");
         InputHandler fooStream = executionPlanRuntime.getInputHandler("FooStream1");
-
+        siddhiAppRuntime.start();
         executionPlanRuntime.start();
         ArrayList<Event> arrayList = new ArrayList<Event>();
         arrayList.add(new Event(System.currentTimeMillis(), new Object[]{"WSO2", 55.6f, 100L}));
@@ -89,10 +92,12 @@ public class WebsocketSinkTestCase {
         expected.add("WSO2");
         expected.add("IBM");
         expected.add("WSO2");
-       /* SiddhiTestHelper.waitForEvents(waitTime, 3, eventCount, timeout);
-        //  AssertJUnit.assertEquals(expected, receivedEventNameList);
-        AssertJUnit.assertEquals(3, eventCount.get());*/
-        executionPlanRuntime.shutdown();
-        //siddhiAppRuntime.shutdown();
+        SiddhiTestHelper.waitForEvents(waitTime, 3, eventCount, timeout);
+        AssertJUnit.assertEquals(expected, receivedEventNameList);
+        AssertJUnit.assertEquals(3, eventCount.get());
+
+        siddhiAppRuntime.shutdown();
+
     }
+
 }

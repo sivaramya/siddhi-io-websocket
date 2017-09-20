@@ -2,44 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae1f72c3-701b-4252-a0bf-179f2c786012" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_wso2_carbon_org_wso2_carbon_core_5_2_0_m3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_wso2_carbon_transport_org_wso2_carbon_transport_http_netty_4_4_29.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketChannelHandlerContext.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketHttpRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/target/classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketChannelHandlerContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/target/classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketHttpRequest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/target/classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/target/surefire-reports/Generic Integration test suite/testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/component/target/surefire-reports/testng-failed.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkUtil.java" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebsocketSinkUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.class" afterPath="$PROJECT_DIR$/component/target/classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/jacoco.exec" afterPath="$PROJECT_DIR$/component/target/jacoco.exec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/test-classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.class" afterPath="$PROJECT_DIR$/component/target/test-classes/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_wso2_carbon_transport_org_wso2_carbon_connector_framework_6_0_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_wso2_carbon_transport_org_wso2_carbon_transport_http_netty_6_0_0.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/siddhi-io-websocket.iml" afterPath="$PROJECT_DIR$/component/siddhi-io-websocket.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java" afterPath="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java" afterPath="$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/component/target/classes/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/findbugs/findbugsXml.xml" afterPath="$PROJECT_DIR$/component/target/findbugs/findbugsXml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/component/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/component/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/component/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/Generic Integration test suite/org.wso2.das.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/Generic Integration test suite/org.wso2.das.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/Generic Integration test suite/org.wso2.das.xml" afterPath="$PROJECT_DIR$/component/target/surefire-reports/Generic Integration test suite/org.wso2.das.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/TEST-TestSuite.xml" afterPath="$PROJECT_DIR$/component/target/surefire-reports/TEST-TestSuite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/TestSuite.txt" afterPath="$PROJECT_DIR$/component/target/surefire-reports/TestSuite.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/emailable-report.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/emailable-report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/junitreports/TEST-org.wso2.extension.siddhi.io.websocket.sink.WebsocketSinkTestCase.xml" afterPath="$PROJECT_DIR$/component/target/surefire-reports/junitreports/TEST-org.wso2.extension.siddhi.io.websocket.sink.WebsocketSinkTestCase.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/methods-alphabetical.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/methods-alphabetical.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/methods.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/methods.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/toc.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/old/Generic Integration test suite/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/component/target/surefire-reports/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/surefire-reports/testng-results.xml" afterPath="$PROJECT_DIR$/component/target/surefire-reports/testng-results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/component/target/test-classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/component/target/test-classes/META-INF/DEPENDENCIES" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/api/1.0.0-SNAPSHOT.md" afterPath="$PROJECT_DIR$/docs/api/1.0.0-SNAPSHOT.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,87 +25,46 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/siddhi_io_websocket_parent$WebsocketSinkTestCase_websocketSinkAndSourceTestCase.coverage" NAME="WebsocketSinkTestCase.websocketSinkAndSourceTestCase Coverage Results" MODIFIED="1505885966247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.wso2.extension.siddhi.io.websocket.sink.WebsocketChannelHandlerContext</FILTER>
+    </SUITE>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="WebsocketSink.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-166">
-              <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+            <state relative-caret-position="496">
+              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
-                <element signature="e#0#5637#0" expanded="true" />
+                <element signature="e#0#3931#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-                <element signature="e#2682#2683#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebsocketSource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java">
+      <file leaf-file-name="String.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/local/java/jdk1.8.0_131/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="78" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#3849#0" expanded="true" />
-                <marker date="1505814385323" expanded="false" signature="2189:2200" ph=" { " />
-                <marker date="1505814385323" expanded="false" signature="2233:2239" ph=" }" />
-                <marker date="1505814385323" expanded="false" signature="3484:3495" ph=" { " />
-                <marker date="1505814385323" expanded="false" signature="3507:3513" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketClientConnectorImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/contractimpl/websocket/WebSocketClientConnectorImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="119" column="32" lean-forward="false" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSocketClient.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClient.java">
+      <file leaf-file-name="WebsocketPublisher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2318">
-              <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketSessionImpl.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/internal/websocket/WebSocketSessionImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebSocketClientConnector.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/contract/websocket/WebSocketClientConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NioServerSocketChannel.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.7.Final/netty-transport-4.1.7.Final-sources.jar!/io/netty/channel/socket/nio/NioServerSocketChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+            <state relative-caret-position="472">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1551#1552#0" expanded="true" />
+                <element signature="e#1624#1625#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,20 +73,34 @@
       <file leaf-file-name="WebSocketClientConnectorListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="90" lean-forward="false" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
-              <folding />
+            <state relative-caret-position="229">
+              <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1330#1331#0" expanded="true" />
+                <element signature="e#1381#1382#0" expanded="true" />
+                <element signature="e#2317#2318#0" expanded="true" />
+                <element signature="e#2353#2354#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebsocketSinkUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebsocketSinkUtil.java">
+      <file leaf-file-name="WebsocketSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            <state relative-caret-position="241">
+              <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2837#2838#0" expanded="true" />
+                <element signature="e#2930#2931#0" expanded="true" />
+                <element signature="e#3008#3009#0" expanded="true" />
+                <element signature="e#3081#3082#0" expanded="true" />
+                <marker date="1505887537374" expanded="false" signature="2452:2463" ph=" { " />
+                <marker date="1505887537374" expanded="false" signature="2496:2502" ph=" }" />
+                <marker date="1505887537374" expanded="false" signature="3361:3372" ph=" { " />
+                <marker date="1505887537374" expanded="false" signature="3384:3390" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -164,11 +109,13 @@
       <file leaf-file-name="WebsocketSinkTestCase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+            <state relative-caret-position="285">
+              <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="46" />
               <folding>
-                <marker date="1505815098158" expanded="false" signature="2738:2832" ph="(StreamCallback) (events) → {" />
-                <marker date="1505815098158" expanded="false" signature="3067:3082" ph="}" />
+                <element signature="e#0#4798#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2877#3221#0" expanded="true" />
+                <element signature="e#3220#3221#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -237,16 +184,17 @@
         <option value="$MAVEN_REPOSITORY$/org/wso2/carbon/messaging/org.wso2.carbon.messaging/2.3.7/org.wso2.carbon.messaging-2.3.7.jar!/org/wso2/carbon/messaging/Headers.class" />
         <option value="$MAVEN_REPOSITORY$/org/wso2/carbon/messaging/org.wso2.carbon.messaging/2.3.7/org.wso2.carbon.messaging-2.3.7.jar!/org/wso2/carbon/messaging/CarbonMessageProcessor.class" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketChannelHandlerContext.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketClientConnectorListener.java" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketRemoteServerInitializer.java" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketRemoteServerFrameHandler.java" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketRemoteServer.java" />
-        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java" />
         <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebsocketSinkUtil.java" />
-        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java" />
-        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java" />
+        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java" />
         <option value="$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java" />
+        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java" />
+        <option value="$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java" />
       </list>
     </option>
   </component>
@@ -275,8 +223,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -474,6 +420,10 @@
               <option name="myItemId" value="websocket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -511,6 +461,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -915,70 +867,72 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.15 at 10h 20m 11s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 04m 08s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.15 at 10h 21m 53s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 04m 31s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.15 at 10h 23m 21s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 05m 20s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.15 at 10h 32m 19s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 31m 36s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.15 at 12h 50m 37s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 35m 37s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.18 at 10h 03m 50s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 10h 36m 58s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.18 at 10h 04m 54s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 11h 09m 29s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.18 at 10h 05m 48s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 11h 14m 24s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.19 at 13h 27m 32s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 11h 15m 47s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.19 at 13h 28m 49s.xml">
+    <history-entry file="WebsocketSinkTestCase_websocketSinkAndSourceTestCase - 2017.09.20 at 11h 17m 58s.xml">
       <configuration name="WebsocketSinkTestCase.websocketSinkAndSourceTestCase" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5129906" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16989248" sideWeight="0.52183527" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46129033" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7623656" sideWeight="0.47816473" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23825318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12580645" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3172043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21935484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3419355" sideWeight="0.47816473" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24101713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.4870094" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -990,20 +944,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
-          <line>95</line>
+          <line>98</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -1204,18 +1146,6 @@
           <line>135</line>
           <properties />
           <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>102</line>
-          <properties />
-          <option name="timeStamp" value="127" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="128" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/4.4.29/org.wso2.carbon.transport.http.netty-4.4.29.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClientConnector.class</url>
@@ -1440,150 +1370,6 @@
           <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="195" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="196" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>89</line>
-          <properties />
-          <option name="timeStamp" value="198" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="199" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="200" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="201" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="202" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>111</line>
-          <properties />
-          <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="204" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>29</line>
-          <properties />
-          <option name="timeStamp" value="205" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>34</line>
-          <properties />
-          <option name="timeStamp" value="206" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="207" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="208" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>61</line>
-          <properties />
-          <option name="timeStamp" value="209" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="210" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>71</line>
-          <properties />
-          <option name="timeStamp" value="211" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="212" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>73</line>
-          <properties />
-          <option name="timeStamp" value="213" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="214" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="216" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="217" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>147</line>
-          <properties />
-          <option name="timeStamp" value="219" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
-          <line>148</line>
-          <properties />
-          <option name="timeStamp" value="220" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/contractimpl/websocket/WebSocketClientConnectorImpl.java</url>
           <line>59</line>
           <properties />
@@ -1690,12 +1476,6 @@
           <line>141</line>
           <properties />
           <option name="timeStamp" value="241" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClient.java</url>
-          <line>143</line>
-          <properties />
-          <option name="timeStamp" value="242" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.0/org.wso2.carbon.transport.http.netty-6.0.0-sources.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClient.java</url>
@@ -1836,10 +1616,172 @@
           <option name="timeStamp" value="266" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
-          <line>81</line>
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>41</line>
           <properties />
-          <option name="timeStamp" value="268" />
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="279" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="287" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="291" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="292" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="296" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="299" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="302" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="303" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
+          <line>63</line>
+          <properties />
+          <option name="timeStamp" value="308" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="314" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="315" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>85</line>
+          <properties />
+          <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>86</line>
+          <properties />
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="331" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="334" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketClient.java</url>
@@ -1873,8 +1815,24 @@
           </properties>
           <option name="timeStamp" value="221" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java</url>
+          <line>19</line>
+          <properties class="org.wso2.extension.siddhi.io.websocket.sink.WebsocketPublisher" method="websocketPublish">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java</url>
+          <line>75</line>
+          <properties class="org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink" method="init">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="269" />
+      <option name="time" value="335" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1883,30 +1841,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/client/http2/HTTP2SettingsHandler.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/server/HTTPServer.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/client/http2/HTTP2Client.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/client/http2/HTTP2ResponseHandler.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/client/websocket/WebSocketClient.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/websocket/WebSocketServerTest.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/websocket/WebSocketMessageProcessor.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/websocket/WebSocketClientTest.java" />
-    <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/util/TestUtil.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/4.4.29/org.wso2.carbon.transport.http.netty-4.4.29.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClientConnector.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="50" column="25" lean-forward="false" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/4.4.29/org.wso2.carbon.transport.http.netty-4.4.29.jar!/org/wso2/carbon/transport/http/netty/listener/WebSocketSourceHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="36" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/4.4.29/org.wso2.carbon.transport.http.netty-4.4.29-sources.jar!/org/wso2/carbon/transport/http/netty/config/ListenerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -2078,23 +2012,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketHttpRequest.java" />
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketChannelHandlerContext.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketRemoteServerFrameHandler.java" />
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebSocketRemoteServerInitializer.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.7.Final/netty-transport-4.1.7.Final-sources.jar!/io/netty/channel/socket/nio/NioServerSocketChannel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="41" column="13" lean-forward="false" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2103,7 +2026,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
+          <folding>
+            <element signature="e#0#1470#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2111,7 +2037,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2318">
           <caret line="167" column="0" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#7244#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2119,7 +2048,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#3455#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2259#2260#0" expanded="false" />
+            <element signature="e#2291#2292#0" expanded="false" />
+            <element signature="e#2720#2721#0" expanded="false" />
+            <element signature="e#2755#2756#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2833#2834#0" expanded="false" />
+            <element signature="e#2878#2879#0" expanded="false" />
+            <element signature="e#2907#2908#0" expanded="false" />
+            <element signature="e#2975#2976#0" expanded="false" />
+            <element signature="e#3012#3013#0" expanded="false" />
+            <element signature="e#3182#3183#0" expanded="false" />
+            <element signature="e#3218#3219#0" expanded="false" />
+            <element signature="e#3403#3404#0" expanded="false" />
+            <element signature="e#3449#3450#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2127,62 +2073,180 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="78" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3849#0" expanded="true" />
-            <marker date="1505814385323" expanded="false" signature="2189:2200" ph=" { " />
-            <marker date="1505814385323" expanded="false" signature="2233:2239" ph=" }" />
-            <marker date="1505814385323" expanded="false" signature="3484:3495" ph=" { " />
-            <marker date="1505814385323" expanded="false" signature="3507:3513" ph=" }" />
+            <element signature="e#0#2899#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebsocketSinkUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="171">
           <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
+            <element signature="e#0#2117#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11.jar!/org/wso2/carbon/transport/http/netty/contract/websocket/WebSocketClientConnector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="e#4622#5682#0" expanded="true" />
+            <element signature="e#5681#5682#0" expanded="true" />
+            <element signature="e#5799#6445#0" expanded="true" />
+            <element signature="e#6444#6445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11.jar!/org/wso2/carbon/transport/http/netty/contractimpl/websocket/WebSocketClientConnectorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="31" column="82" lean-forward="false" selection-start-line="31" selection-start-column="82" selection-end-line="31" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11.jar!/org/wso2/carbon/transport/http/netty/internal/websocket/WebSocketSessionImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11-sources.jar!/org/wso2/carbon/transport/http/netty/contract/websocket/WebSocketClientConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_131/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="119" column="32" lean-forward="false" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
+        <state relative-caret-position="496">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
-            <element signature="e#0#5637#0" expanded="true" />
+            <element signature="e#0#3931#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
-            <element signature="e#2682#2683#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/local/java/jdk1.8.0_131/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11-sources.jar!/org/wso2/carbon/transport/http/netty/sender/websocket/WebSocketClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2242">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11-sources.jar!/org/wso2/carbon/transport/http/netty/internal/websocket/WebSocketSessionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/wso2/carbon/transport/org.wso2.carbon.transport.http.netty/6.0.11/org.wso2.carbon.transport.http.netty-6.0.11-sources.jar!/org/wso2/carbon/transport/http/netty/contractimpl/websocket/WebSocketClientConnectorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="90" lean-forward="false" selection-start-line="5" selection-start-column="90" selection-end-line="5" selection-end-column="90" />
-          <folding />
+        <state relative-caret-position="229">
+          <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
+            <element signature="e#2317#2318#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/component/src/main/java/org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="57" column="31" lean-forward="false" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2837#2838#0" expanded="true" />
+            <element signature="e#2930#2931#0" expanded="true" />
+            <element signature="e#3008#3009#0" expanded="true" />
+            <element signature="e#3081#3082#0" expanded="true" />
+            <marker date="1505887537374" expanded="false" signature="2452:2463" ph=" { " />
+            <marker date="1505887537374" expanded="false" signature="2496:2502" ph=" }" />
+            <marker date="1505887537374" expanded="false" signature="3361:3372" ph=" { " />
+            <marker date="1505887537374" expanded="false" signature="3384:3390" ph=" }" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/component/src/test/java/org/wso2/extension/siddhi/io/websocket/sink/WebsocketSinkTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="285">
+          <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="46" />
           <folding>
-            <marker date="1505815098158" expanded="false" signature="2738:2832" ph="(StreamCallback) (events) → {" />
-            <marker date="1505815098158" expanded="false" signature="3067:3082" ph="}" />
+            <element signature="e#0#4798#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2877#3221#0" expanded="true" />
+            <element signature="e#3220#3221#0" expanded="true" />
           </folding>
         </state>
       </provider>

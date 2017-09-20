@@ -22,8 +22,7 @@ package org.wso2.extension.siddhi.io.websocket.sink;
 import org.apache.log4j.Logger;
 import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
 import org.wso2.carbon.transport.http.netty.common.Constants;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
+import org.wso2.carbon.transport.http.netty.contract.websocket.*;
 import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;;
 import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
 import org.wso2.siddhi.annotation.Example;
@@ -61,7 +60,7 @@ public class WebsocketSink extends Sink {
     private Session session = null;
     private String uri;
     private WebSocketClientConnector clientConnector;
-    private HttpWsConnectorFactoryImpl httpConnectorFactory = null;
+    private WebSocketClientConnectorListener connectorListener;
 
     @Override
     public Class[] getSupportedInputEventClasses() {
@@ -78,57 +77,26 @@ public class WebsocketSink extends Sink {
                         ConfigReader configReader, SiddhiAppContext siddhiAppContext) {
         this.streamDefinition = streamDefinition;
         this.uri = optionHolder.validateAndGetStaticValue(URI);
-        httpConnectorFactory = new HttpWsConnectorFactoryImpl();
+        connectorListener = new WebSocketClientConnectorListener();
 
     }
 
     @Override
     public void connect() throws ConnectionUnavailableException {
-        Map<String, Object> senderProperties = new HashMap<>();
-        senderProperties.put(Constants.REMOTE_ADDRESS, uri);
-        senderProperties.put(Constants.WEBSOCKET_SUBPROTOCOLS, null);
-        clientConnector = httpConnectorFactory.createWsClientConnector(senderProperties);
-        WebSocketClientConnectorListener connectorListener = new WebSocketClientConnectorListener();
-        try {
-            session = handshake(connectorListener);
-        } catch (ClientConnectorException e) {
-            throw new ConnectionUnavailableException("Session was not available when trying to publish events " +
-                    "in " + streamDefinition);
-        }
+        HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();
+        WsClientConnectorConfig configuration = new WsClientConnectorConfig(uri);
+        clientConnector = httpConnectorFactory.createWsClientConnector(configuration);
     }
 
     @Override
     public void publish(Object payload, DynamicOptions dynamicOptions) throws ConnectionUnavailableException {
-        if (session == null) {
-            throw new ConnectionUnavailableException("Session was not available when trying to publish events " +
-                    "in " + streamDefinition);
-        } else if (!session.isOpen()) {
-            throw new ConnectionUnavailableException("Session was not open when trying " +
-                    "to publish events in  " + streamDefinition +
-                    ", for  Session ID: " + session.getId());
-        } else {
-            String message = (String) payload;
-            try {
-                session.getBasicRemote().sendText(message);
-            } catch (IOException e) {
-                throw new SiddhiAppRuntimeException("Error in publishing the message via websocket in " +
-                        streamDefinition);
-            }
-        }
+        String message = (String) payload;
+        WebsocketPublisher.websocketPublish(connectorListener, message, clientConnector);
     }
 
 
     @Override
     public void disconnect() {
-        try {
-            if (session != null) {
-                session.close();
-            }
-        } catch (IOException e) {
-            if (log.isDebugEnabled()) {
-                log.debug("Error in disconnection the session");
-            }
-        }
     }
 
     @Override
@@ -142,11 +110,6 @@ public class WebsocketSink extends Sink {
 
     @Override
     public void restoreState(Map<String, Object> map) {
-    }
-
-    private Session handshake(WebSocketConnectorListener connectorListener) throws ClientConnectorException {
-        Map<String, String> customHeaders = new HashMap<>();
-        return clientConnector.connect(connectorListener, customHeaders);
     }
 
 }

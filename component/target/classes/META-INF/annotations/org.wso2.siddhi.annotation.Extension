@@ -1,0 +1,2 @@
+org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink
+org.wso2.extension.siddhi.io.websocket.source.WebsocketSource

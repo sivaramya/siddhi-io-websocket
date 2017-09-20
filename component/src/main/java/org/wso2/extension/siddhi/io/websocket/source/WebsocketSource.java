@@ -1,11 +1,9 @@
-/*
 package org.wso2.extension.siddhi.io.websocket.source;
 
 import org.apache.log4j.Logger;
 import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
 import org.wso2.carbon.transport.http.netty.common.Constants;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
+import org.wso2.carbon.transport.http.netty.contract.websocket.*;
 import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;
 import org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink;
 import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
@@ -17,15 +15,16 @@ import org.wso2.siddhi.core.stream.input.source.Source;
 import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
 import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.core.util.transport.OptionHolder;
+
+import javax.websocket.MessageHandler;
 import javax.websocket.Session;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-*/
 /**
- * Created by sivaramya on 9/19/17.
- *//*
-
+ * {@code WebsocketSink } Handle the websocket publishing tasks.
+ */
 
 @Extension(
         name = "websocket",
@@ -41,15 +40,18 @@ public class WebsocketSource extends Source {
 
     private String uri;
     private WebSocketClientConnector clientConnector;
-    private HttpWsConnectorFactoryImpl httpConnectorFactory = null;
     private SourceEventListener sourceEventListener;
-    private Session session = null;
+    private WebSocketClientConnectorListener connectorListener;
 
     @Override
     public void init(SourceEventListener sourceEventListener, OptionHolder optionHolder, String[] strings,
                      ConfigReader configReader, SiddhiAppContext siddhiAppContext) {
         this.uri = optionHolder.validateAndGetStaticValue(URI);
         this.sourceEventListener = sourceEventListener;
+        connectorListener = new WebSocketClientConnectorListener();
+        HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();
+        WsClientConnectorConfig configuration = new WsClientConnectorConfig(uri);
+        clientConnector = httpConnectorFactory.createWsClientConnector(configuration);
     }
 
     @Override
@@ -59,20 +61,18 @@ public class WebsocketSource extends Source {
 
     @Override
     public void connect(ConnectionCallback connectionCallback) throws ConnectionUnavailableException {
-        Map<String, Object> senderProperties = new HashMap<>();
-        senderProperties.put(Constants.REMOTE_ADDRESS, uri);
-        senderProperties.put(Constants.WEBSOCKET_SUBPROTOCOLS, null);
-        httpConnectorFactory = new HttpWsConnectorFactoryImpl();
-        clientConnector = httpConnectorFactory.createWsClientConnector(senderProperties);
-        WebSocketClientConnectorListener connectorListener = new WebSocketClientConnectorListener();
-        try {
-            session = handshake(connectorListener);
-        } catch (ClientConnectorException e) {
-            throw new ConnectionUnavailableException("Session was not available when trying to publish events " +
-                    "in " + sourceEventListener);
-        }
-        String message = connectorListener.getReceivedTextToClient();
-        sourceEventListener.onEvent(message, null);
+        HandshakeFuture handshakeFuture = handshake(connectorListener);
+        handshakeFuture.setHandshakeListener(new HandshakeListener() {
+            @Override
+            public void onSuccess(Session session) {
+                connectorListener.setSourceEventListener(sourceEventListener);
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                log.error("error in sending the message");
+            }
+        });
     }
 
     @Override
@@ -105,9 +105,7 @@ public class WebsocketSource extends Source {
 
     }
 
-    private Session handshake(WebSocketConnectorListener connectorListener) throws ClientConnectorException {
-        Map<String, String> customHeaders = new HashMap<>();
-        return clientConnector.connect(connectorListener, customHeaders);
+    private HandshakeFuture handshake(WebSocketConnectorListener connectorListener) {
+        return clientConnector.connect(connectorListener);
     }
 }
-*/

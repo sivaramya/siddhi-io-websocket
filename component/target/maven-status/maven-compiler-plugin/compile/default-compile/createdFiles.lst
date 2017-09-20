@@ -1,0 +1,7 @@
+org/wso2/extension/siddhi/io/websocket/util/WebSocketClientConnectorListener.class
+org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher.class
+org/wso2/extension/siddhi/io/websocket/sink/WebsocketSink.class
+org/wso2/extension/siddhi/io/websocket/sink/WebsocketPublisher$1.class
+org/wso2/extension/siddhi/io/websocket/source/WebsocketSource.class
+META-INF/annotations/org.wso2.siddhi.annotation.Extension
+org/wso2/extension/siddhi/io/websocket/source/WebsocketSource$1.class
