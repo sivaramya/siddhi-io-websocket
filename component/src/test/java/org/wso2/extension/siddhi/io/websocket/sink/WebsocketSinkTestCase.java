@@ -20,6 +20,8 @@ package org.wso2.extension.siddhi.io.websocket.sink;
 
 import org.apache.log4j.Logger;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;;
 import org.wso2.siddhi.core.SiddhiAppRuntime;
@@ -44,6 +46,17 @@ public class WebsocketSinkTestCase {
     public void init() {
         eventCount.set(0);
     }
+
+    @BeforeClass
+    public void setup() {
+        TyrusWebsocketServer.start();
+    }
+
+    @AfterClass
+    public void serverClose() {
+        TyrusWebsocketServer.stop();
+    }
+
 
     @Test
     public void websocketSinkAndSourceTestCase() throws InterruptedException {
@@ -71,7 +84,7 @@ public class WebsocketSinkTestCase {
                 }
             }
         });
-
+        siddhiAppRuntime.start();
         SiddhiAppRuntime executionPlanRuntime = siddhiManager.createSiddhiAppRuntime(
                 "@App:name('TestExecutionPlan') " +
                         "define stream FooStream1 (symbol string, price float, volume long); " +
@@ -81,7 +94,6 @@ public class WebsocketSinkTestCase {
                         "Define stream BarStream1 (symbol string, price float, volume long);" +
                         "from FooStream1 select symbol, price, volume insert into BarStream1;");
         InputHandler fooStream = executionPlanRuntime.getInputHandler("FooStream1");
-        siddhiAppRuntime.start();
         executionPlanRuntime.start();
         ArrayList<Event> arrayList = new ArrayList<Event>();
         arrayList.add(new Event(System.currentTimeMillis(), new Object[]{"WSO2", 55.6f, 100L}));

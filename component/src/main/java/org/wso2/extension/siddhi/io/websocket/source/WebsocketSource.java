@@ -1,9 +1,11 @@
 package org.wso2.extension.siddhi.io.websocket.source;
 
 import org.apache.log4j.Logger;
-import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
-import org.wso2.carbon.transport.http.netty.common.Constants;
-import org.wso2.carbon.transport.http.netty.contract.websocket.*;
+import org.wso2.carbon.transport.http.netty.contract.websocket.HandshakeFuture;
+import org.wso2.carbon.transport.http.netty.contract.websocket.HandshakeListener;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WsClientConnectorConfig;
 import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;
 import org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink;
 import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
@@ -16,11 +18,8 @@ import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
 import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.core.util.transport.OptionHolder;
 
-import javax.websocket.MessageHandler;
-import javax.websocket.Session;
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
+import javax.websocket.Session;
 
 /**
  * {@code WebsocketSink } Handle the websocket publishing tasks.
@@ -70,7 +69,7 @@ public class WebsocketSource extends Source {
 
             @Override
             public void onError(Throwable throwable) {
-                log.error("error in sending the message");
+                log.error("error in connecting with the websocket server");
             }
         });
     }

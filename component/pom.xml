@@ -61,6 +61,19 @@
             <artifactId>org.wso2.carbon.transport.http.netty.feature</artifactId>
             <type>zip</type>
         </dependency>
+        <!--<dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-server</artifactId>
+            <version>1.11</version>
+            <scope>test</scope>
+        </dependency>-->
+        <dependency>
+            <groupId>org.glassfish.tyrus</groupId>
+            <artifactId>tyrus-container-grizzly-server</artifactId>
+            <version>1.13.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

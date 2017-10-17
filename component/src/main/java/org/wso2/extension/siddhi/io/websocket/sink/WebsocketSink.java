@@ -20,25 +20,22 @@
 package org.wso2.extension.siddhi.io.websocket.sink;
 
 import org.apache.log4j.Logger;
-import org.wso2.carbon.messaging.exceptions.ClientConnectorException;
-import org.wso2.carbon.transport.http.netty.common.Constants;
-import org.wso2.carbon.transport.http.netty.contract.websocket.*;
+import org.wso2.carbon.transport.http.netty.contract.websocket.HandshakeFuture;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
+import org.wso2.carbon.transport.http.netty.contract.websocket.WsClientConnectorConfig;
 import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;;
 import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
 import org.wso2.siddhi.core.exception.ConnectionUnavailableException;
-import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
 import org.wso2.siddhi.core.stream.output.sink.Sink;
 import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.core.util.transport.DynamicOptions;
 import org.wso2.siddhi.core.util.transport.OptionHolder;
 import org.wso2.siddhi.query.api.definition.StreamDefinition;
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
-import javax.websocket.Session;
 
 /**
  * {@code WebsocketSink } Handle the websocket publishing tasks.
@@ -57,10 +54,10 @@ public class WebsocketSink extends Sink {
     private static final String URI = "uri";
 
     private StreamDefinition streamDefinition;
-    private Session session = null;
     private String uri;
     private WebSocketClientConnector clientConnector;
     private WebSocketClientConnectorListener connectorListener;
+    private HandshakeFuture handshakeFuture;
 
     @Override
     public Class[] getSupportedInputEventClasses() {
@@ -86,12 +83,13 @@ public class WebsocketSink extends Sink {
         HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();
         WsClientConnectorConfig configuration = new WsClientConnectorConfig(uri);
         clientConnector = httpConnectorFactory.createWsClientConnector(configuration);
+        handshakeFuture = handshake(connectorListener);
     }
 
     @Override
     public void publish(Object payload, DynamicOptions dynamicOptions) throws ConnectionUnavailableException {
         String message = (String) payload;
-        WebsocketPublisher.websocketPublish(connectorListener, message, clientConnector);
+        WebsocketPublisher.websocketPublish(handshakeFuture, message);
     }
 
 
@@ -110,6 +108,10 @@ public class WebsocketSink extends Sink {
 
     @Override
     public void restoreState(Map<String, Object> map) {
+    }
+
+    private HandshakeFuture handshake(WebSocketConnectorListener connectorListener) {
+        return clientConnector.connect(connectorListener);
     }
 
 }

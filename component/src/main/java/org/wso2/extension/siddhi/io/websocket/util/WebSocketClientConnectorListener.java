@@ -5,12 +5,9 @@ import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketBinaryMe
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketCloseMessage;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketControlMessage;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketControlSignal;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketInitMessage;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketTextMessage;
 import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
-
-import java.nio.ByteBuffer;
 
 /**
  * Created by sivaramya on 9/19/17.
@@ -22,8 +19,9 @@ public class WebSocketClientConnectorListener implements WebSocketConnectorListe
     //private ByteBuffer receivedByteBufferToClient;
     private SourceEventListener sourceEventListener = null;
 
-    public void setSourceEventListener (SourceEventListener eventListener) {
+    public void setSourceEventListener(SourceEventListener eventListener) {
         sourceEventListener = eventListener;
+
     }
 
     @Override
@@ -63,5 +61,4 @@ public class WebSocketClientConnectorListener implements WebSocketConnectorListe
     private void handleError(Throwable throwable) {
         log.error(throwable.getMessage());
     }
-
 }
