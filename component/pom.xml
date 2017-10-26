@@ -33,8 +33,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.wso2.extension.siddhi.map.json</groupId>
-            <artifactId>siddhi-map-json</artifactId>
+            <groupId>org.wso2.extension.siddhi.map.binary</groupId>
+            <artifactId>siddhi-map-binary</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

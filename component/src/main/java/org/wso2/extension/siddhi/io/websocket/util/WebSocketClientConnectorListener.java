@@ -15,13 +15,11 @@ import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
 public class WebSocketClientConnectorListener implements WebSocketConnectorListener {
     private static final Logger log = Logger.getLogger(WebSocketConnectorListener.class);
 
-    private String receivedTextToClient;
     //private ByteBuffer receivedByteBufferToClient;
     private SourceEventListener sourceEventListener = null;
 
     public void setSourceEventListener(SourceEventListener eventListener) {
         sourceEventListener = eventListener;
-
     }
 
     @Override
@@ -30,7 +28,7 @@ public class WebSocketClientConnectorListener implements WebSocketConnectorListe
 
     @Override
     public void onMessage(WebSocketTextMessage textMessage) {
-        receivedTextToClient = textMessage.getText();
+        String receivedTextToClient = textMessage.getText();
         sourceEventListener.onEvent(receivedTextToClient, null);
     }
 

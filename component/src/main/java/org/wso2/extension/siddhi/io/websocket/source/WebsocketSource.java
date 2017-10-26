@@ -1,28 +1,27 @@
 package org.wso2.extension.siddhi.io.websocket.source;
 
-import org.apache.log4j.Logger;
 import org.wso2.carbon.transport.http.netty.contract.websocket.HandshakeFuture;
 import org.wso2.carbon.transport.http.netty.contract.websocket.HandshakeListener;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketClientConnector;
-import org.wso2.carbon.transport.http.netty.contract.websocket.WebSocketConnectorListener;
 import org.wso2.carbon.transport.http.netty.contract.websocket.WsClientConnectorConfig;
 import org.wso2.carbon.transport.http.netty.contractimpl.HttpWsConnectorFactoryImpl;
-import org.wso2.extension.siddhi.io.websocket.sink.WebsocketSink;
 import org.wso2.extension.siddhi.io.websocket.util.WebSocketClientConnectorListener;
 import org.wso2.siddhi.annotation.Example;
 import org.wso2.siddhi.annotation.Extension;
 import org.wso2.siddhi.core.config.SiddhiAppContext;
 import org.wso2.siddhi.core.exception.ConnectionUnavailableException;
+import org.wso2.siddhi.core.exception.SiddhiAppRuntimeException;
 import org.wso2.siddhi.core.stream.input.source.Source;
 import org.wso2.siddhi.core.stream.input.source.SourceEventListener;
 import org.wso2.siddhi.core.util.config.ConfigReader;
 import org.wso2.siddhi.core.util.transport.OptionHolder;
 
+import java.nio.ByteBuffer;
 import java.util.Map;
 import javax.websocket.Session;
 
 /**
- * {@code WebsocketSink } Handle the websocket publishing tasks.
+ * {@code WebsocketSource } Handle the websocket receiving tasks.
  */
 
 @Extension(
@@ -33,11 +32,8 @@ import javax.websocket.Session;
 )
 
 public class WebsocketSource extends Source {
-    private static final Logger log = Logger.getLogger(WebsocketSink.class);
-
     private static final String URI = "uri";
 
-    private String uri;
     private WebSocketClientConnector clientConnector;
     private SourceEventListener sourceEventListener;
     private WebSocketClientConnectorListener connectorListener;
@@ -45,7 +41,7 @@ public class WebsocketSource extends Source {
     @Override
     public void init(SourceEventListener sourceEventListener, OptionHolder optionHolder, String[] strings,
                      ConfigReader configReader, SiddhiAppContext siddhiAppContext) {
-        this.uri = optionHolder.validateAndGetStaticValue(URI);
+        String uri = optionHolder.validateAndGetStaticValue(URI);
         this.sourceEventListener = sourceEventListener;
         connectorListener = new WebSocketClientConnectorListener();
         HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();
@@ -55,12 +51,12 @@ public class WebsocketSource extends Source {
 
     @Override
     public Class[] getOutputEventClasses() {
-        return new Class[]{String.class};
+        return new Class[]{String.class, ByteBuffer.class};
     }
 
     @Override
     public void connect(ConnectionCallback connectionCallback) throws ConnectionUnavailableException {
-        HandshakeFuture handshakeFuture = handshake(connectorListener);
+        HandshakeFuture handshakeFuture = clientConnector.connect(connectorListener);
         handshakeFuture.setHandshakeListener(new HandshakeListener() {
             @Override
             public void onSuccess(Session session) {
@@ -69,14 +65,14 @@ public class WebsocketSource extends Source {
 
             @Override
             public void onError(Throwable throwable) {
-                log.error("error in connecting with the websocket server");
+                throw new SiddhiAppRuntimeException("Error while connecting with the websocket server defined in "
+                                                            + sourceEventListener);
             }
         });
     }
 
     @Override
     public void disconnect() {
-
     }
 
     @Override
@@ -102,9 +98,5 @@ public class WebsocketSource extends Source {
     @Override
     public void restoreState(Map<String, Object> map) {
 
-    }
-
-    private HandshakeFuture handshake(WebSocketConnectorListener connectorListener) {
-        return clientConnector.connect(connectorListener);
     }
 }

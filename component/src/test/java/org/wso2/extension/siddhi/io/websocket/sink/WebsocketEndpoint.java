@@ -1,9 +1,11 @@
 package org.wso2.extension.siddhi.io.websocket.sink;
 
+import javax.websocket.ClientEndpoint;
 import javax.websocket.OnMessage;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
+@ClientEndpoint
 @ServerEndpoint(value = "/abc")
 public class WebsocketEndpoint {
 

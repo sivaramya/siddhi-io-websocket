@@ -13,7 +13,7 @@ public class TyrusWebsocketServer {
     public static void start() {
         try {
             server.start();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
     }
 
