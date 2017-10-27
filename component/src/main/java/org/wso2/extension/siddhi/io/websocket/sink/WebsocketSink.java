@@ -53,7 +53,6 @@ public class WebsocketSink extends Sink {
 
     private StreamDefinition streamDefinition;
     private String uri;
-    private WebSocketClientConnector clientConnector;
     private WebSocketClientConnectorListener connectorListener;
     private HandshakeFuture handshakeFuture;
 
@@ -79,7 +78,7 @@ public class WebsocketSink extends Sink {
     public void connect() throws ConnectionUnavailableException {
         HttpWsConnectorFactoryImpl httpConnectorFactory = new HttpWsConnectorFactoryImpl();
         WsClientConnectorConfig configuration = new WsClientConnectorConfig(uri);
-        clientConnector = httpConnectorFactory.createWsClientConnector(configuration);
+        WebSocketClientConnector clientConnector = httpConnectorFactory.createWsClientConnector(configuration);
         handshakeFuture = clientConnector.connect(connectorListener);
     }
 

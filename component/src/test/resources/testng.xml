@@ -20,13 +20,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Generic Integration test suite">
-    <test name="org.wso2.das">
+    <test name="websocket testcases">
         <classes>
-           <!-- <class name="org.wso2.extension.siddhi.io.rabbitmq.sink.RabbitMQSinkTestCase" />-->
             <class name="org.wso2.extension.siddhi.io.websocket.sink.WebsocketSinkTestCase" />
-           <!-- <class name="org.wso2.extension.siddhi.io.rabbitmq.source.RabbitMQSourceTestCase" />
-            <class name="org.wso2.extension.siddhi.io.rabbitmq.source.RabbitMQQueueTestCase" />
-            <class name="org.wso2.extension.siddhi.io.rabbitmq.source.RabbitMQUriTestCase" />-->
         </classes>
     </test>
 </suite>

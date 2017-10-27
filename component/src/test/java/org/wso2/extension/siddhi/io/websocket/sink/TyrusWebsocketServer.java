@@ -1,3 +1,4 @@
+
 package org.wso2.extension.siddhi.io.websocket.sink;
 
 import org.glassfish.tyrus.server.Server;
